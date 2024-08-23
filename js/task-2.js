@@ -25,15 +25,11 @@ const images = [
   }
 ];
 
-// Отримуємо посилання на ul.gallery
 const gallery = document.querySelector('.gallery');
-
-// Створюємо HTML-рядок із li і img елементів для кожного зображення
 const galleryMarkup = images.map(({ url, alt }) => 
   `<li class="gallery-item">
     <img src="${url}" alt="${alt}" class="gallery-img">
   </li>`
 ).join('');
 
-// Додаємо всю галерею в DOM за одну операцію додавання
 gallery.insertAdjacentHTML('beforeend', galleryMarkup);
